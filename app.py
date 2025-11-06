@@ -1,11 +1,17 @@
 from flask import Flask, request, jsonify
 import psycopg2
+from dotenv import load_dotenv
+
 import os
+# ==========================================
+# 🧠 Cargar variables de entorno
+# ==========================================
+load_dotenv()
 
 app = Flask(__name__)
 
 # ==========================================
-# Configuración de conexión
+#  Configuración de conexión
 # ==========================================
 DATABASE_URL = os.getenv("DATABASE_URL")
 TOKEN_FLASK = os.getenv("TOKEN_FLASK")
